@@ -1,0 +1,56 @@
+// 'use client';
+
+// import { useSerializableValue } from "@editor/state";
+// import { useEffect, useState } from "react";
+
+// interface UseDraggableMouseProps {
+//   id: string;
+//   initialValue?: number;
+//   direction?: 'horizontal' | 'vertical';
+// }
+
+// export function useDraggableMouse({
+//   id,
+//   direction = 'horizontal',
+// }: UseDraggableMouseProps) {
+//   const [ value, setValue ] = useSerializableValue(id, null)
+//   const [snapshot, setSnapshot] = useState(value);
+//   const [dragging, setDragging] = useState(false);
+
+//   const [startVal, setStartVal] = useState(0);
+
+//   const onStart = 
+//     (event: any) => {
+//       setStartVal((direction === 'horizontal' ? event.clientX: event.clientY));
+//       setSnapshot(value);
+//       setDragging(true);
+//     };
+    
+
+//   useEffect(() => {
+//     const onUpdate = (event: any) => {
+//       if (dragging) {
+//         let previous = ((direction === 'horizontal' ? event.clientX: event.clientY)  - startVal) * 1;
+//         setValue(snapshot+previous);
+//       }
+//     };
+
+//     const onEnd = () => {
+//       setDragging(false);
+//     };
+
+//     document.addEventListener("mousemove", onUpdate);
+//     document.addEventListener("mouseup", onEnd);
+//     return () => {
+//       document.removeEventListener("mousemove", onUpdate);
+//       document.removeEventListener("mouseup", onEnd);
+//     };
+//   }, [startVal, setValue, snapshot]);
+
+//   return {
+//     value,
+//     dragging,
+//     setValue,
+//     onStart
+//   };
+// }

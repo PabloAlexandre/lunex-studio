@@ -1,0 +1,82 @@
+// 'use client';
+// import { ReactNode, createContext, useContext } from "react";
+// import { DndProvider, useDrop } from "react-dnd";
+// import { HTML5Backend } from "react-dnd-html5-backend";
+
+// import { ItemType } from "@editor/types";
+// import { useCMS } from "./cms";
+
+// interface CMSDraggableContextProps {
+//   isDragging: boolean;
+//   canDrop: boolean;
+//   ref: any;
+//   isOver: boolean;
+//   item: any;
+// }
+
+// const CMSDraggableContext = createContext<CMSDraggableContextProps>({
+//   isDragging: false,
+//   canDrop: false,
+//   ref: null,
+//   isOver: false,
+//   item: null,
+// });
+
+// export function useDraggable() { 
+//   const val = useContext(CMSDraggableContext);
+//   return val;
+// }
+
+// interface CMSDraggableProps {
+//   children: ReactNode;
+// }
+
+// export const CMSDraggablePanel = ({ children }: any) => {
+//   const cms = useCMS();
+
+//   const [{ canDrop, isOver, item }, drop] = useDrop(() => ({
+//     accept: [ItemType.COMPONENT, ItemType.GIZMOS],
+//     drop: (item: any, monitor) => {
+//       const delta = monitor.getDifferenceFromInitialOffset() as {
+//         x: number
+//         y: number
+//       }
+      
+//       if(item.type === ItemType.GIZMOS) {
+//         let left = Math.round((item.left || 0) + delta.x)
+//         let top = Math.round((item.top || 0) + delta.y)
+//         item.setPosition({ x: left, y: top })
+//       }
+      
+//       return { name: 'lunex-viewport' }
+//     },
+//     collect: (monitor) => ({
+//       isOver: monitor.isOver(),
+//       canDrop: monitor.canDrop(),
+//       item: monitor.getItem(),
+//     }),
+//   }));
+
+//   return (
+//     <CMSDraggableContext.Provider value={{ 
+//       ref: drop,
+//       isDragging: false,
+//       canDrop: canDrop,
+//       isOver: isOver,
+//       item,
+//     }}>
+//       { children }
+//     </CMSDraggableContext.Provider>
+//   );
+// };
+
+// export function Draggable({
+//   children
+// }: CMSDraggableProps) {
+
+//   return (
+//     <CMSDraggablePanel>
+//       {children}
+//     </CMSDraggablePanel>
+//   )
+// }

@@ -1,0 +1,26 @@
+{
+  "name": "@lunex/components",
+  "version": "1.0.0",
+  "description": "A components core package for @lunex/editor. Developed by @lunex team",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "venus dev",
+    "build": "venus build",
+    "test": "venus test",
+    "lint": "eslint ./src --ext .ts,.tsx --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "typescript": "*",
+    "@lunex/venus": "workspace:*"
+  }
+}

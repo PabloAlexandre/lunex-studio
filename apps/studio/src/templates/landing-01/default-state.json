@@ -1,0 +1,167 @@
+{
+  "header": {
+    "links": {
+      "items": [{
+        "text": "About Us",
+        "href": "#"
+      }, {
+        "text": "Products",
+        "href": "#"
+      }, {
+        "text": "Pricing",
+        "href": "#"
+      }, {
+        "text": "Contact us",
+        "href": "#",
+        "rounded": true
+      }]
+    },
+    "logo": {
+      "src": "/logo.webp",
+      "alt": "Logo"
+    }
+  },
+  "hero": {
+    "title": {
+      "text": "Meet Charles, your new personal assistant that help you for all tasks"
+    },
+    "description": {
+      "text": "Discover a lot of new thing with your performatical personal assistant."
+    },
+    "message": {
+      "text": "ARE YOU READY FOR THE NEXT STEP?"
+    },
+    "image": {
+      "src": "/hero.png",
+      "alt": "Hero"
+    }
+  },
+  "feature": {
+    "title": {
+      "text": "Your new way to see the world"
+    },
+    "1": {
+      "title": {
+        "text": "Take advantage of AI for productivity"
+      },
+      "text": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. Images from: undraw.co"
+      },
+      "image": {
+        "src": "/feature-1.png",
+        "alt": "Feature 1"
+      }
+    },
+    "2": {
+      "title": {
+        "text": "Meet your personal assistance"
+      },
+      "text": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. Images from: undraw.co"
+      },
+      "image": {
+        "src": "/feature-2.png",
+        "alt": "Feature 2"
+      }
+    }
+  },
+  "feature-actions": {
+    "title": {
+      "text": "Adaptable for every scenario"
+    },
+    "1": { 
+      "title": {
+        "text": "USE FOR SCHEDULE MEETINGS"
+      },
+      "text": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula. Images from: undraw.co"
+      }
+    }
+  },
+  "pricing": {
+    "title": {
+      "text": "Pricing"
+    }
+  },
+  "call-to-action": {
+    "title": {
+      "text": "Ready to get started?"
+    },
+    "description": {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula."
+    }
+  },
+  "footer": { 
+    "copyright": {
+      "text": "© 2020 Charles. All rights reserved."
+    },
+    "logo": {
+      "src": "/footer-logo.png",
+      "alt": "Logo"
+    },
+    "links": {
+      "title": "Links",
+      "items": [{
+        "text": "Link 1",
+        "href": "#"
+      }, {
+        "text": "Link 2",
+        "href": "#"
+      }, {
+        "text": "Link 3",
+        "href": "#"
+      }, {
+        "text": "Link 4",
+        "href": "#"
+      }]
+    },
+    "legal": {
+      "title": "Legal",
+      "items": [{
+        "text": "Link 1",
+        "href": "#"
+      }, {
+        "text": "Link 2",
+        "href": "#"
+      }, {
+        "text": "Link 3",
+        "href": "#"
+      }, {
+        "text": "Link 4",
+        "href": "#"
+      }]
+    },
+    "social": {
+      "title": "Social",
+      "items": [{
+        "text": "Link 1",
+        "href": "#"
+      }, {
+        "text": "Link 2",
+        "href": "#"
+      }, {
+        "text": "Link 3",
+        "href": "#"
+      }, {
+        "text": "Link 4",
+        "href": "#"
+      }]
+    },
+    "company": {
+      "title": "Company",
+      "items": [{
+        "text": "Link 1",
+        "href": "#"
+      }, {
+        "text": "Link 2",
+        "href": "#"
+      }, {
+        "text": "Link 3",
+        "href": "#"
+      }, {
+        "text": "Link 4",
+        "href": "#"
+      }]
+    }
+  }
+}

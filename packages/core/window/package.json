@@ -1,0 +1,42 @@
+{
+  "name": "@lunex/window",
+  "version": "1.0.0",
+  "description": "The window manager for @lunex editor. Developed by @lunex team",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "venus dev",
+    "build": "venus build",
+    "test": "venus test",
+    "lint": "eslint ./src --ext .ts,.tsx --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "@lunex/plugins": "workspace:*",
+    "@lunex/state": "workspace:*"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "typescript": "*",
+    "@lunex/venus": "workspace:*",
+    "react": "*",
+    "react-dom": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@lunex/plugins": "workspace:*",
+    "@lunex/state": "workspace:*",
+    "@types/uuid": "~9.0.1"
+  },
+  "dependencies": {
+    "@lunex/icons": "workspace:*",
+    "uuid": "~9.0.0",
+    "react-dnd": "~16.0.1",
+    "react-dnd-html5-backend": "~16.0.1",
+    "@lunex/utils": "workspace:*"
+  }
+}

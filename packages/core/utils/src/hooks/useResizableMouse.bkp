@@ -1,0 +1,80 @@
+// 'use client';
+
+// import { useSerializableValue } from "@editor/state";
+// import { useEffect, useState } from "react";
+
+// interface UseDraggableMouseProps {
+//   id: string;
+//   initialValue?: any;
+//   direction?: 'horizontal' | 'vertical';
+// }
+
+// export function useResizableMouse({
+//   id,
+//   initialValue = {
+//     w: 1,
+//     h: 1,
+//     x: 1,
+//     y: 1
+//   },
+//   direction = 'horizontal',
+// }: UseDraggableMouseProps) {
+
+//   const [ value, setValue ] = useSerializableValue(id, initialValue)
+//   const [snapshot, setSnapshot] = useState(value);
+//   const [dragging, setDragging] = useState('');
+
+//   const [startVal, setStartVal] = useState(initialValue);
+
+//   useEffect(() => {
+//     setValue(initialValue);
+//     setSnapshot(initialValue);
+//   }, [JSON.stringify(initialValue)]); 
+
+//   const onStart = (side: string) =>
+//     (event: any) => {
+//       if(side === 'left') setStartVal({ x: event.clientX });
+//       if(side === 'right') setStartVal({ w: event.clientX });
+//       if(side === 'top') setStartVal({ y: event.clientY });
+//       if(side === 'bottom') setStartVal({ h: event.clientY });
+      
+//       setSnapshot(value);
+//       setDragging(side);
+//     };
+    
+
+//   useEffect(() => {
+//     const onUpdate = (event: any) => {
+//       if (dragging) {
+//         const initialValue = dragging === 'left' ? startVal.x : dragging === 'right' ? startVal.w : dragging === 'top' ? startVal.y : startVal.h;
+//         let previous = ((dragging === 'left' || dragging === 'right' ? event.clientX: event.clientY)  - initialValue) * 1;
+
+//         if(dragging === 'left') setValue((v: any) => ({...v, x: event.clientX }));
+//         if(dragging === 'right') setValue((v: any) => ({...v, w: event.clientX }));
+//         if(dragging === 'top') setValue((v: any) => ({...v, y: event.clientY }));
+//         if(dragging === 'bottom') setValue((v: any) => ({...v, h: event.clientY }));
+        
+//         setValue(snapshot+previous);
+//       }
+//     };
+
+//     const onEnd = () => {
+//       setDragging('');
+//     };
+
+//     document.addEventListener("mousemove", onUpdate);
+//     document.addEventListener("mouseup", onEnd);
+
+//     return () => {
+//       document.removeEventListener("mousemove", onUpdate);
+//       document.removeEventListener("mouseup", onEnd);
+//     };
+//   }, [startVal, setValue, snapshot]);
+
+//   return {
+//     value,
+//     dragging,
+//     setValue,
+//     onStart
+//   };
+// }

@@ -1,0 +1,95 @@
+// import { Splitter, SplitterPanel, SplitterResizeTrigger } from "@ark-ui/react";
+// import { useMemo } from "react";
+// import { useEditor, useSerializableValue } from "@editor/state";
+// import { useCMS } from "@editor/cms";
+
+// const MIN_SIZE = 5;
+// const MAX_SIZE = 95;
+
+// export const useResizableChildren = (id: string, children: any, direction: 'horizontal' | 'vertical') => {
+//   const childrens = children.flat().filter((it: any) => !!it);
+//   const { config } = useEditor();
+//   const cms = useCMS();
+
+//   const initialValue = useMemo(() => childrens.map((it: any) => ({ 
+//     id: it.props.props.item.id, 
+//     size: 100/childrens.length, 
+//     minSize: MIN_SIZE, 
+//     maxSize: MAX_SIZE 
+//   })), []);
+
+//   const name = direction === 'horizontal' ? 'row' : 'column';
+//   const [ value, setValue ] = useSerializableValue(`${id}.properties.${name}`, initialValue);
+
+//   function handleResizeEnd(details: any) {
+//     const settings = Array.from(details.size).map((it: any) => ({
+//       id: it.id,
+//       size: it.size,
+//       minSize: MIN_SIZE,
+//       maxSize: MAX_SIZE
+//     }))
+
+//     setValue(settings);
+//     cms.setSettings('lock', false);
+//   }
+
+//   function handleResizeStart() {
+//     cms.setSettings('lock', true);
+//   }
+
+
+//   const visibilityClass = config?.editor?.settings?.gizmos ? 'visible' : 'invisible';
+//   const className = direction === 'horizontal' ? 'w-2 h-full -left-1 top-0 ' : 'h-2 w-full my-auto -top-1 left-0';
+//   const parentClassName = direction === 'horizontal' ? 'my-auto' : 'mx-auto';
+//   const items = childrens.map((child: any, i: number) => {
+//     const id = child.props.props.item.id;
+//     const previousId =  i > 0 ? childrens[i - 1].props.props.item.id : null;
+
+//     const transition = previousId ? `${previousId}:${id}`: null;
+    
+//     return (
+//       <>
+//         {
+//           transition && (
+//             <SplitterResizeTrigger id={transition as any} className={parentClassName}>
+//               <div 
+//                 className={visibilityClass+" rounded bg-gray-100 opacity-20 transition-opacity duration-75 hover:opacity-50 absolute z-30 "+className} 
+//               >
+
+//               </div>
+//             </SplitterResizeTrigger>
+//           )
+//         }
+//         <SplitterPanel id={id} key={id}>
+//           { child }
+//         </SplitterPanel>
+//       </>
+//     )
+//   });
+
+//   const newValue = useMemo(() => childrens.map((it: any) => ({
+//     minSize: MIN_SIZE,
+//     maxSize: MAX_SIZE,
+//     id:  it.props.props.item.id,
+//     size: 100/childrens.length,
+//   })), [])
+
+//   if(value.length !== childrens.length) {
+//     console.log(newValue);
+//   }
+//   // console.log(direction, newValue.length, value);
+
+//   return {
+//     items: (
+//       <Splitter
+//         orientation={direction}
+//         size={newValue}
+//         key={id}
+//         onResizeEnd={handleResizeEnd}
+//         onResizeStart={handleResizeStart}
+//       >
+//         { items }
+//       </Splitter>
+//     )
+//   }
+// }

@@ -1,0 +1,156 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.98.0",
+  "pnpmVersion": "6.7.1",
+  "nodeSupportedVersionRange": ">=14.15.0 <15.0.0 || >=16.13.0 <17.0.0 || >=18.15.0 <19.0.0",
+  "projectFolderMinDepth": 2,
+  "projectFolderMaxDepth": 4,
+  "gitPolicy": {},
+  "repository": {
+    "url": "https://github.com/PabloAlexandre/lunex",
+    "defaultBranch": "main",
+    "defaultRemote": "origin"
+  },
+  "eventHooks": {
+    "preRushInstall": [],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "variants": [],
+  "projects": [
+    {
+      "packageName": "@lunex/studio",
+      "projectFolder": "apps/studio",
+      "tags": [
+        "application/lunex-studio"
+      ]
+    },
+    {
+      "packageName": "@lunex/venus",
+      "projectFolder": "packages/venus",
+      "tags": [
+        "generator/compiler"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/viewport",
+      "projectFolder": "packages/extensions/viewport",
+      "tags": [
+        "extensions/viewport"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/layout",
+      "projectFolder": "packages/extensions/layout",
+      "tags": [
+        "extensions/layout"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/controller",
+      "projectFolder": "packages/extensions/controller",
+      "tags": [
+        "extensions/controller"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/code-editor",
+      "projectFolder": "packages/extensions/code-editor",
+      "tags": [
+        "extensions/code-editor"
+      ]
+    },
+    {
+      "packageName": "@lunex/components",
+      "projectFolder": "packages/core/components",
+      "tags": [
+        "core/components"
+      ]
+    },
+    {
+      "packageName": "@lunex/editor",
+      "projectFolder": "packages/core/editor",
+      "tags": [
+        "core/editor"
+      ]
+    },
+    {
+      "packageName": "@lunex/state",
+      "projectFolder": "packages/core/state",
+      "tags": [
+        "core/state"
+      ]
+    },
+    {
+      "packageName": "@lunex/icons",
+      "projectFolder": "packages/core/icons",
+      "tags": [
+        "core/icons"
+      ]
+    },
+    {
+      "packageName": "@lunex/utils",
+      "projectFolder": "packages/core/utils",
+      "tags": [
+        "core/utils"
+      ]
+    },
+    {
+      "packageName": "@lunex/plugins",
+      "projectFolder": "packages/core/plugins",
+      "tags": [
+        "core/plugins"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/inspector",
+      "projectFolder": "packages/extensions/inspector",
+      "tags": [
+        "extensions/inspector"
+      ]
+    },
+    {
+      "packageName": "@lunex/commands",
+      "projectFolder": "packages/core/commands",
+      "tags": [
+        "core/commands"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/window",
+      "projectFolder": "packages/extensions/window",
+      "tags": [
+        "extensions/window"
+      ]
+    },
+    {
+      "packageName": "@lunex/ui",
+      "projectFolder": "packages/core/ui",
+      "tags": [
+        "core/ui"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/svelte",
+      "projectFolder": "packages/extensions/svelte",
+      "tags": [
+        "extensions/svelte"
+      ]
+    },
+    {
+      "packageName": "@lunex/window",
+      "projectFolder": "packages/core/window",
+      "tags": [
+        "core/window"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/base",
+      "projectFolder": "packages/extensions/base",
+      "tags": [
+        "extensions/base"
+      ]
+    }
+  ]
+}

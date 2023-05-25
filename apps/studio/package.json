@@ -1,0 +1,28 @@
+{
+  "name": "@lunex/studio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "eslint": "*",
+    "eslint-config-next": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*",
+    "slugify": "^1.6.6",
+    "tailwindcss": "*",
+    "typescript": "*",
+    "@lunex/editor": "workspace:*",
+    "autoprefixer": "~10.4.14"
+  },
+  "devDependencies": {
+    "@types/node": "18.16.3",
+    "@types/react": "*",
+    "@types/react-dom": "*"
+  }
+}

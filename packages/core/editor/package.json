@@ -1,0 +1,37 @@
+{
+  "name": "@lunex/editor",
+  "version": "1.0.0",
+  "description": "A editor for @lunex. Developed by @lunex creators",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "venus dev",
+    "build": "venus build",
+    "test": "venus test",
+    "lint": "eslint ./src --ext .ts,.tsx --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "eslint": "*",
+    "typescript": "*",
+    "@lunex/venus": "workspace:*"
+  },
+  "dependencies": {
+    "@lunex/state": "workspace:*",
+    "@lunex/plugins": "workspace:*",
+    "@lunex/commands": "workspace:*",
+    "@lunex/window": "workspace:*",
+    "@lunex-extensions/base": "workspace:*"
+  }
+}

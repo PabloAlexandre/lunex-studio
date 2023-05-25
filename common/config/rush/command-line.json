@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+  "commands": [{
+    "commandKind": "global",
+    "name": "create",
+    "summary": "Create a new template from our projects",
+    "description": "Generate a new template project for desired target",
+    "shellCommand": "node packages/venus/.bin/generator.js"
+  }],
+  "parameters": []
+}

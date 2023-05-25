@@ -1,0 +1,35 @@
+{
+  "name": "@lunex/state",
+  "version": "1.0.0",
+  "description": "A @lunex editor state manager. Developed by @lunex team",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "venus dev",
+    "build": "venus build",
+    "test": "venus test",
+    "lint": "eslint ./src --ext .ts,.tsx --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "typescript": "*",
+    "@lunex/venus": "workspace:*",
+    "react": "*",
+    "react-dom": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/uuid": "~9.0.1"
+  },
+  "dependencies": {
+    "@lunex/utils": "workspace:*",
+    "uuid": "~9.0.0"
+  }
+}
