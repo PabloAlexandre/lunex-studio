@@ -1,14 +1,19 @@
 import { Panel } from "@lunex/plugins";
+import { SideMenu } from "../components/hiearchy";
+import {
+  MultiBackend,
+  getBackendOptions,
+  DndProvider
+} from "@minoru/react-dnd-treeview";
 
 const PanelComponent = () => {
   return (
-    <>
-      Structure
-    </>
+    <DndProvider backend={MultiBackend} options={getBackendOptions()}>
+      <SideMenu />
+    </DndProvider>
   )
 }
 
 export const StructurePanel = Panel.createBasePanel('structure', "StructureIcon", 'left', {
-  title: 'Structure', 
   Component: PanelComponent
 });

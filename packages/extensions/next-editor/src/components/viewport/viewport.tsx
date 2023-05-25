@@ -3,7 +3,6 @@ import { NoPanArea, Space } from "react-zoomable-ui";
 import { useClickOutside } from "@lunex/utils";
 import { useEditor } from "@lunex/state";
 import { Icon, IconKeys } from "@lunex/icons";
-import { Window } from "@lunex/plugins";
 
 function gcd(a: number, b: number): number {
   return (b == 0) ? a : gcd(b, a % b);
@@ -33,7 +32,7 @@ const ViewportMenu = () => {
   )
 }
 
-export function ViewportWindowImpl() {
+export function ViewportWindowsComponent() {
   const { 
     context: editorCtx,
     name,
@@ -150,9 +149,3 @@ export function ViewportWindowImpl() {
     </main>
   )
 }
-
-export const ViewportWindow = Window.createWindow('viewport', 'Viewport', ViewportWindowImpl, {
-  icon: "PageIcon",
-  canClose: false,
-  isEditable: false,
-}) as any;

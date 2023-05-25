@@ -275,34 +275,6 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       typescript: 5.0.4
 
-  ../../packages/extensions/blueprints:
-    specifiers:
-      '@lunex/icons': workspace:*
-      '@lunex/plugins': workspace:*
-      '@lunex/state': workspace:*
-      '@lunex/ui': workspace:*
-      '@lunex/utils': workspace:*
-      '@lunex/venus': workspace:*
-      '@types/react': '*'
-      '@types/react-dom': '*'
-      eslint: '*'
-      react: '*'
-      react-dom: '*'
-      typescript: '*'
-    devDependencies:
-      '@lunex/icons': link:../../core/icons
-      '@lunex/plugins': link:../../core/plugins
-      '@lunex/state': link:../../core/state
-      '@lunex/ui': link:../../core/ui
-      '@lunex/utils': link:../../core/utils
-      '@lunex/venus': link:../../venus
-      '@types/react': 18.2.6
-      '@types/react-dom': 18.2.4
-      eslint: 8.41.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      typescript: 5.0.4
-
   ../../packages/extensions/code-editor:
     specifiers:
       '@lunex/state': workspace:*
@@ -406,12 +378,17 @@ importers:
       '@lunex/ui': workspace:*
       '@lunex/utils': workspace:*
       '@lunex/venus': workspace:*
+      '@minoru/react-dnd-treeview': ~3.4.4
       '@types/react': '*'
       '@types/react-dom': '*'
       eslint: '*'
       react: '*'
       react-dom: '*'
+      react-zoomable-ui: ~0.11.0
       typescript: '*'
+    dependencies:
+      '@minoru/react-dnd-treeview': 3.4.4_react-dom@18.2.0+react@18.2.0
+      react-zoomable-ui: 0.11.0_react@18.2.0
     devDependencies:
       '@lunex/icons': link:../../core/icons
       '@lunex/plugins': link:../../core/plugins

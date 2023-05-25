@@ -1,5 +1,7 @@
-import { ViewportPanelsConfig } from "./viewport-panels.command";
+import { ViewportCommands } from "../components/viewport";
+import { LayoutCommands } from "./layout.commands";
 
 export const Commands = [
-  ...ViewportPanelsConfig,
+  ...ViewportCommands,
+  ...LayoutCommands,
 ]

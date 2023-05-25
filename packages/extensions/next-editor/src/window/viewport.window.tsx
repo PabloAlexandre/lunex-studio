@@ -1,10 +1,9 @@
 import { Window } from "@lunex/plugins";
+import { ViewportWindowsComponent } from "../components/viewport";
 
 export function ViewportWindowImpl() {
   return (
-    <div>
-      Viewport
-    </div>
+    <ViewportWindowsComponent />
   )
 }
 
