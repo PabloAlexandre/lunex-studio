@@ -38,7 +38,6 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
-commom/temp/*
 
 # Dependency directories
 node_modules/
@@ -94,6 +93,7 @@ out
 .nuxt
 dist
 
+common/temp
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
