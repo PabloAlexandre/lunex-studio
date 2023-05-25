@@ -1,0 +1,5 @@
+import { Commands } from "@lunex/plugins"
+
+export const {{fileTitle}}CommandsConfig = Commands.createBasicCommand('{{category}}', [
+  {{commands}}
+])

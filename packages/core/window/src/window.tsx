@@ -11,6 +11,7 @@ interface Props {
 }
 export function Window({ children }: Props) {
   const window = useInternalWindow();
+  
   return (
     <DndProvider backend={HTML5Backend}>
       <WindowContext.Provider value={window}>

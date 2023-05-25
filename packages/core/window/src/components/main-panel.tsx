@@ -12,13 +12,19 @@ export function MainPanel({ children }: Props) {
     activeTab,
   } = useWindow();
   
-  const { getConfigByType } = usePlugins();
+  const { getConfigByType, getConfigs } = usePlugins();
+
+  console.log(getConfigs<WindowPluginConfigProps>("@lunex/window"));
+  // console.log(getConfigs<any>("@lunex/panel"));
+  // console.log(getConfigs<any>("@lunex/commands"));
+
   let Component = () => <>{children}</>
-  const type = getTab(activeTab)?.type; 
+  const type = getTab(activeTab)?.type;
+  console.log(type);
 
   if(type) {
     const windowConfig = getConfigByType<WindowPluginConfigProps>(type, '@lunex/window');
-    
+    console.log({ windowConfig });
     if(windowConfig?.component) {
       Component = windowConfig.component as any;
     }

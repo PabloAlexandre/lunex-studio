@@ -132,13 +132,6 @@
       ]
     },
     {
-      "packageName": "@lunex-extensions/svelte",
-      "projectFolder": "packages/extensions/svelte",
-      "tags": [
-        "extensions/svelte"
-      ]
-    },
-    {
       "packageName": "@lunex/window",
       "projectFolder": "packages/core/window",
       "tags": [
@@ -150,6 +143,13 @@
       "projectFolder": "packages/extensions/base",
       "tags": [
         "extensions/base"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/next-editor",
+      "projectFolder": "packages/extensions/next-editor",
+      "tags": [
+        "extensions/next-editor"
       ]
     }
   ]

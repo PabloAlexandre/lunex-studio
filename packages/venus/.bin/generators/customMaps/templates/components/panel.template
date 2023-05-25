@@ -1,0 +1,14 @@
+import { Panel } from "@lunex/plugins";
+
+const PanelComponent = () => {
+  return (
+    <>
+      {{ title }}
+    </>
+  )
+}
+
+export const {{fileTitle}}Panel = Panel.createBasePanel('{{id}}', "FrameIcon", '{{side}}', {
+  title: '{{title}}', 
+  Component: PanelComponent
+});

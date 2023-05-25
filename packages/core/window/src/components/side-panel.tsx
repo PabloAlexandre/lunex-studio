@@ -28,6 +28,10 @@ export function SidePanel({
   const className = active ? 'w-96' : '';
   const activePanel = active && panels.find(it => it.id === active);
 
+  const commands = getConfigs<any>('@lunex/commands');
+  console.log(commands);
+
+
   console.log({ activePanel });
 
   const menus = (

@@ -80,6 +80,7 @@ importers:
   ../../packages/core/editor:
     specifiers:
       '@lunex-extensions/base': workspace:*
+      '@lunex-extensions/next-editor': workspace:*
       '@lunex/commands': workspace:*
       '@lunex/plugins': workspace:*
       '@lunex/state': workspace:*
@@ -93,6 +94,7 @@ importers:
       typescript: '*'
     dependencies:
       '@lunex-extensions/base': link:../../extensions/base
+      '@lunex-extensions/next-editor': link:../../extensions/next-editor
       '@lunex/commands': link:../commands
       '@lunex/plugins': link:../plugins
       '@lunex/state': link:../state
@@ -273,6 +275,34 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       typescript: 5.0.4
 
+  ../../packages/extensions/blueprints:
+    specifiers:
+      '@lunex/icons': workspace:*
+      '@lunex/plugins': workspace:*
+      '@lunex/state': workspace:*
+      '@lunex/ui': workspace:*
+      '@lunex/utils': workspace:*
+      '@lunex/venus': workspace:*
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      eslint: '*'
+      react: '*'
+      react-dom: '*'
+      typescript: '*'
+    devDependencies:
+      '@lunex/icons': link:../../core/icons
+      '@lunex/plugins': link:../../core/plugins
+      '@lunex/state': link:../../core/state
+      '@lunex/ui': link:../../core/ui
+      '@lunex/utils': link:../../core/utils
+      '@lunex/venus': link:../../venus
+      '@types/react': 18.2.6
+      '@types/react-dom': 18.2.4
+      eslint: 8.41.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      typescript: 5.0.4
+
   ../../packages/extensions/code-editor:
     specifiers:
       '@lunex/state': workspace:*
@@ -368,14 +398,32 @@ importers:
       eslint: 8.41.0
       typescript: 5.0.4
 
-  ../../packages/extensions/svelte:
+  ../../packages/extensions/next-editor:
     specifiers:
+      '@lunex/icons': workspace:*
+      '@lunex/plugins': workspace:*
+      '@lunex/state': workspace:*
+      '@lunex/ui': workspace:*
+      '@lunex/utils': workspace:*
       '@lunex/venus': workspace:*
+      '@types/react': '*'
+      '@types/react-dom': '*'
       eslint: '*'
+      react: '*'
+      react-dom: '*'
       typescript: '*'
     devDependencies:
+      '@lunex/icons': link:../../core/icons
+      '@lunex/plugins': link:../../core/plugins
+      '@lunex/state': link:../../core/state
+      '@lunex/ui': link:../../core/ui
+      '@lunex/utils': link:../../core/utils
       '@lunex/venus': link:../../venus
+      '@types/react': 18.2.6
+      '@types/react-dom': 18.2.4
       eslint: 8.41.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
       typescript: 5.0.4
 
   ../../packages/extensions/viewport:

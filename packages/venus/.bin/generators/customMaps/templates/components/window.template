@@ -1,0 +1,15 @@
+import { Window } from "@lunex/plugins";
+
+export function {{fileTitle}}WindowImpl() {
+  return (
+    <>
+      {{title}}
+    </>
+  )
+}
+
+export const {{fileTitle}}Window = Window.createWindow('{{id}}', '{{title}}', {{fileTitle}}WindowImpl, {
+  icon: "FrameIcon",
+  canClose: {{canClose}},
+  isEditable: {{isEditable}},
+}) as any;

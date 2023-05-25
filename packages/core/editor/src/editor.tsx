@@ -6,6 +6,7 @@ import { EditorState } from "@lunex/state";
 import { Window } from "@lunex/window";
 export { useWindow } from "@lunex/window";
 import { BasePlugins } from "@lunex-extensions/base"; 
+import { NextEditorPlugin } from "@lunex-extensions/next-editor";
 
 interface EditorProps {
   children: ReactNode;
@@ -26,7 +27,7 @@ export function Editor({ children }: EditorProps) {
 
   return state ? (
     <EditorState name="elza-133">
-      <Plugins initialPlugins={BasePlugins}>
+      <Plugins initialPlugins={NextEditorPlugin as any}>
         <Window>
           {children}
         </Window>

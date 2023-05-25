@@ -1,0 +1,1 @@
+Commands.createBasicItem("{{name}}", "{{description}}", () => {}, "FrameIcon", () => true, () => 1)

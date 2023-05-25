@@ -1,0 +1,9 @@
+import { createPlugin } from '@lunex/plugins';
+
+{{imports}}
+
+export const {{fileTitle}}Plugin = [
+  createPlugin([
+    {{plugins}}
+  ] as any)
+]

@@ -15,6 +15,7 @@ export function Finder() {
   const { getConfigs } = usePlugins();
 
   const commands = getConfigs<CommandPluginConfigProps>('@lunex/commands');
+  console.log(commands);
   
   const {
     context,

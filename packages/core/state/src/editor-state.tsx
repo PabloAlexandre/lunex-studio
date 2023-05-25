@@ -12,7 +12,6 @@ export function EditorState({
   children
 }: any) {
   const manager = useEditorManager(name);
-  console.log({ realName: name});
   return (
     <EditorContext.Provider value={manager}>
       { children }
