@@ -5,9 +5,7 @@ import { Finder } from "@lunex/commands";
 import { EditorState } from "@lunex/state";
 import { Window } from "@lunex/window";
 export { useWindow } from "@lunex/window";
-// import { BasePlugins } from "@lunex-extensions/base"; 
-import { NextEditorPlugin } from "@lunex-extensions/next-editor";
-// import { FigmaPlugin } from "@lunex-extensions/figma";
+import { BasePlugins } from "@lunex-extensions/base"; 
 
 interface EditorProps {
   children: ReactNode;
@@ -28,7 +26,7 @@ export function Editor({ children }: EditorProps) {
 
   return state ? (
     <EditorState name="elza-133">
-      <Plugins initialPlugins={NextEditorPlugin as any}>
+      <Plugins initialPlugins={BasePlugins as any}>
         <Window>
           {children}
         </Window>
