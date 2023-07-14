@@ -10,7 +10,7 @@ function ItemPanel({
 }: any){
   const className = active ? 'dark:bg-white/40 dark:hover:bg-white/50' : 'dark:bg-white/10 dark:hover:bg-white/20';
   return (
-    <span onClick={onClick} className={className + " flex items-center justify-center rounded-sm p-2 mb-2 cursor-pointer uppercase font-bold text-gray-300"}>
+    <span onClick={onClick} className={className + " flex items-center justify-center rounded-sm p-2 cursor-pointer uppercase font-bold text-gray-300"}>
       <Icon color="white" name={icon} size={5} className="opacity-90"/>
     </span>
   )
@@ -34,7 +34,7 @@ export function SidePanel({
     {
       panels.length ? (
         panels.map((panel, index) => (
-          <div className="flex flex-col px-2 py-4">
+          <div className="flex flex-col p-2 pb-0 mb-1">
             <ItemPanel key={index}  onClick={() => setActive(panel.id === active ? '' : panel.id)} icon={panel.icon} active={active === panel.id} />
           </div>
         ))

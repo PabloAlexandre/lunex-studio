@@ -1,7 +1,7 @@
 {
-  "name": "@lunex/editor",
+  "name": "@lunex-extensions/timeline",
   "version": "1.0.0",
-  "description": "A editor for @lunex. Developed by @lunex creators",
+  "description": "The timelite animator extension developed by lunex team",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
@@ -16,7 +16,12 @@
   "license": "ISC",
   "peerDependencies": {
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "@lunex/plugins": "workspace:*",
+    "@lunex/state": "workspace:*",
+    "@lunex/icons": "workspace:*",
+    "@lunex/utils": "workspace:*",
+    "@lunex/ui": "workspace:*"
   },
   "devDependencies": {
     "react": "*",
@@ -25,15 +30,11 @@
     "@types/react-dom": "*",
     "eslint": "*",
     "typescript": "*",
-    "@lunex/venus": "workspace:*"
-  },
-  "dependencies": {
+    "@lunex/venus": "workspace:*",
     "@lunex/state": "workspace:*",
     "@lunex/plugins": "workspace:*",
-    "@lunex/commands": "workspace:*",
-    "@lunex/window": "workspace:*",
-    "@lunex-extensions/base": "workspace:*",
-    "@lunex-extensions/next-editor": "workspace:*",
-    "@lunex-extensions/figma": "workspace:*"
+    "@lunex/icons": "workspace:*",
+    "@lunex/utils": "workspace:*",
+    "@lunex/ui": "workspace:*"
   }
 }

@@ -5,8 +5,9 @@ import { Finder } from "@lunex/commands";
 import { EditorState } from "@lunex/state";
 import { Window } from "@lunex/window";
 export { useWindow } from "@lunex/window";
-import { BasePlugins } from "@lunex-extensions/base"; 
+// import { BasePlugins } from "@lunex-extensions/base"; 
 import { NextEditorPlugin } from "@lunex-extensions/next-editor";
+// import { FigmaPlugin } from "@lunex-extensions/figma";
 
 interface EditorProps {
   children: ReactNode;

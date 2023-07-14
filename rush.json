@@ -34,20 +34,6 @@
       ]
     },
     {
-      "packageName": "@lunex-extensions/viewport",
-      "projectFolder": "packages/extensions/viewport",
-      "tags": [
-        "extensions/viewport"
-      ]
-    },
-    {
-      "packageName": "@lunex-extensions/layout",
-      "projectFolder": "packages/extensions/layout",
-      "tags": [
-        "extensions/layout"
-      ]
-    },
-    {
       "packageName": "@lunex-extensions/controller",
       "projectFolder": "packages/extensions/controller",
       "tags": [
@@ -118,13 +104,6 @@
       ]
     },
     {
-      "packageName": "@lunex-extensions/window",
-      "projectFolder": "packages/extensions/window",
-      "tags": [
-        "extensions/window"
-      ]
-    },
-    {
       "packageName": "@lunex/ui",
       "projectFolder": "packages/core/ui",
       "tags": [
@@ -150,6 +129,20 @@
       "projectFolder": "packages/extensions/next-editor",
       "tags": [
         "extensions/next-editor"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/figma",
+      "projectFolder": "packages/extensions/figma",
+      "tags": [
+        "extensions/figma"
+      ]
+    },
+    {
+      "packageName": "@lunex-extensions/timeline",
+      "projectFolder": "packages/extensions/timeline",
+      "tags": [
+        "extensions/timeline"
       ]
     }
   ]

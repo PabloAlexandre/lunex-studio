@@ -29,6 +29,7 @@ function openViewport({ window }: EditorInfoContext) {
 }
 
 export const ViewportCommands = Commands.createBasicCommand('Viewport', [
+  Commands.createBasicItem('Go to viewport', 'Select current window as viewport', openViewport, "PageIcon", () => true, () => 10),
   Commands.createBasicItem('Lock viewport', 'Lock viewport from scroll', lockViewport, "LockIcon", isViewportUnlocked, () => 5),
   Commands.createBasicItem('Unlock viewport', 'Unlock viewport for scroll', unlockViewport, "UnlockIcon", isViewportLocked, () => 5),
   Commands.createBasicItem('Show gizmos', 'Show gizmos in viewport', showGizmos, "EyeIcon", isGizmoHide, () => 6),

@@ -139,9 +139,20 @@ export function ViewportWindowsComponent() {
           <div ref={ref} className="relative">
             { config?.globals?.css && <style>{config.globals.css}</style> }
 
-            <div className="absolute -top-16 text-4xl right-0 p-2 text-white">{config.resolution.w}x{config.resolution.h} | {config.resolution.w / r}/{config.resolution.h / r}</div>
+            <div className="absolute -top-16 text-4xl right-0 p-2 text-white z-10">{config.resolution.w}x{config.resolution.h} | {config.resolution.w / r}/{config.resolution.h / r}</div>
             <div className={backgroundClass + " flex flex-col h-screen relative items-center justify-center"}>
-              <h1 className="font-extralight text-6xl text-gray-400">Hello from charles</h1>
+              <div className="flex m-x-auto w-full" style={{ maxWidth: 1500 }}>
+                <div className="flex flex-col w-full group/item relative p-4">
+                  <div className="absolute left-0 top-0 w-full h-full group-hover/item:border-2 border-blue-300 z-20" />
+                  <h1 className="font-extralight text-6xl text-gray-400">Hello from Left</h1>
+                  <h1 className="font-extralight text-4xl text-gray-400">This is description</h1>
+                </div>
+                <div className="flex flex-col w-full items-end group/item relative p-4">
+                <div className="absolute left-0 top-0 w-full h-full group-hover/item:border-2 border-blue-300 z-20" />
+                  <h1 className="font-extralight text-6xl text-gray-400">Hello from Right</h1>
+                  <h1 className="font-extralight text-4xl text-gray-400">This is description</h1>
+                </div>
+              </div>
             </div>
           </div>
         </NoPanArea>

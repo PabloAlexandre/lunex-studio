@@ -16,6 +16,8 @@
   }
 }
 
+
+
 body {
   overflow: hidden;
   /* color: rgb(var(--foreground-rgb)); */
@@ -427,4 +429,10 @@ div[data-testid="context-menu-item"]:after {
   font-size: 14px;
   font-weight: bold;
   border-radius: 6px;
+}
+
+.hierarchy > li:has(> .hierarchy-active) {
+  border-radius: 8px !important;
+  overflow: hidden;
+  background: #6366f169;
 }

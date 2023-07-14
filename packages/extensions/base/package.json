@@ -28,6 +28,7 @@
     "@types/react-dom": "*"
   },
   "dependencies": {
-    "@lunex-extensions/viewport": "workspace:*"
+    "@lunex-extensions/figma": "workspace:*",
+    "@lunex-extensions/next-editor": "workspace:*"
   }
 }

@@ -1,19 +1,17 @@
 import { useEditor } from "@lunex/state";
 import { Icon } from "@lunex/icons";
-import { useState } from "react";
 
-export const CustomNode = ({ testIdPrefix = "", ...props }) => {
+export const CustomNode = ({ setId, active, testIdPrefix = "", ...props }: any) => {
   const { id } = props.node;
   const indent = props.depth * 24;
-  const [isOpen, setIsOpen] = useState(false);
+
   const {
     state,
     context,
   } = useEditor();
 
   const onSelect = () => {
-    context.selection.setSelection(id);
-    context.inspector.setActive('element');
+    setId(id);
   }
 
   const handleToggle = (e: any) => {
@@ -21,12 +19,12 @@ export const CustomNode = ({ testIdPrefix = "", ...props }) => {
     props.onToggle(props.node.id);
   };
 
-  let className = isOpen || state.selection === id ? "text-rose-300 opacity-100" : "opacity-60"
+  let className = active === id ? "hierarchy-active text-white bg-indigo-500" : "item-tab text-gray-100"
 
   return (
     <div
-      className={className + " items-center flex h-12 pr-4 rounded-md mb-1 w-full justify-between cursor-grab hover:opacity-100 hover:bg-gray-500/30 transition-opacity duration-150"}
-      style={{ paddingInlineStart: indent ? (indent / 2) + 12 : 12 }}
+      className={className+" items-center flex h-10 pr-4 w-full justify-between cursor-grab"}
+      style={{ paddingInlineStart: indent ? (((indent / 24) + 1) * 10) : 10 }}
       ref={props.handleRef}
       onClick={onSelect}
       data-testid={`${testIdPrefix}custom-node-${id}`}
@@ -36,14 +34,14 @@ export const CustomNode = ({ testIdPrefix = "", ...props }) => {
           <div className={`items-center cursor-pointer flex justify-center w-4 h-4`}>
 
             <div onClick={handleToggle} className="items-center flex opacity-50">
-              <Icon name={props.isOpen ? "TriangleUp" : "TriangleDown"} size={4} />
+              <Icon name={props.isOpen ? "TriangleUp" : "TriangleDown"} size={4}/>
             </div>
           </div>
         )}
 
 
-        <h4 className="pl-3 flex items-center">
-          <span>{<Icon name={props.node.icon} size={4} className="mr-4 opacity-50" />}</span>
+        <h4 className="flex items-center">
+          <span>{<Icon name={props.node.icon} size={4} className="mr-4 ml-3 opacity-50" />}</span>
           {props.node.text}
         </h4>
       </div>
