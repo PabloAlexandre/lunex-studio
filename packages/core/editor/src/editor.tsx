@@ -1,11 +1,11 @@
 import { ReactNode, useEffect, useState } from "react";
 
-import { Plugins } from "@lunex/plugins";
-import { Finder } from "@lunex/commands";
-import { EditorState } from "@lunex/state";
-import { Window } from "@lunex/window";
-export { useWindow } from "@lunex/window";
-import { BasePlugins } from "@lunex-extensions/base"; 
+import { Plugins } from "@lunex/plugins/src";
+import { Finder } from "@lunex/commands/src";
+import { EditorState } from "@lunex/state/src";
+import { Window } from "@lunex/window/src";
+export { useWindow } from "@lunex/window/src";
+import { NextEditorPlugin } from "@lunex-extensions/next-editor/src";
 
 interface EditorProps {
   children: ReactNode;
@@ -26,7 +26,7 @@ export function Editor({ children }: EditorProps) {
 
   return state ? (
     <EditorState name="elza-133">
-      <Plugins initialPlugins={BasePlugins as any}>
+      <Plugins initialPlugins={NextEditorPlugin as any}>
         <Window>
           {children}
         </Window>

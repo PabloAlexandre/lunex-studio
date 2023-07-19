@@ -1,14 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { NoPanArea, Space } from "react-zoomable-ui";
-import { useClickOutside } from "@lunex/utils";
-import { useEditor } from "@lunex/state";
-import { Icon, IconKeys } from "@lunex/icons";
-
+import { useClickOutside } from "@lunex/utils/src";
+import { useEditor } from "@lunex/state/src";
+import { Icon } from "@lunex/icons/src";
+import { Resolution } from "./components/resolution";
+import { Rnd } from 'react-rnd';
+import { ViewportRender } from "./viewport-render";
 function gcd(a: number, b: number): number {
   return (b == 0) ? a : gcd(b, a % b);
 }
 
 const ViewportMenu = () => {
+
   const {
     // context,
     
@@ -62,21 +65,32 @@ export function ViewportWindowsComponent() {
     }
   }
 
+  
+  const a = editorCtx.getShared('editor.components');
+  if(a){
+    console.log(a);
+  }
+  const [ size, setSize ] = useState({
+    w: 1366,
+    h: 768,
+  });
+
   // const { ref: dropRef, canDrop, isOver, item } = useDraggable();
   const [ viewport, setViewport ] = useState<any>(null);
   const [ retrigger, setRetrigger ] = useState(false);
+  const [ lock, setLock ] = useState(false);
 
-  // const [ viewportPosition, setViewportPosition ] = context.serializeField('editor.viewport', {
-  //   x: 0,
-  //   y: 0,
-  //   zoom: 1,
-  // });
-
-  const viewportPosition = {
+  const [ viewportPosition, setViewportPosition ] = useState({
     x: 0,
     y: 0,
     zoom: 1,
-  }
+  });
+
+  // const viewportPosition = {
+  //   x: 0,
+  //   y: 0,
+  //   zoom: 1,
+  // }
 
   const parentRef = useRef<HTMLDivElement>(null);
 
@@ -97,7 +111,7 @@ export function ViewportWindowsComponent() {
       return;
     }
 
-    if(context?.settings?.lock) {
+    if(context?.settings?.lock || lock) {
       setRetrigger(true);
       setTimeout(() => viewport.camera.recenter(viewportPosition.x, viewportPosition.y, viewportPosition.zoom), 0);
       return;
@@ -107,11 +121,11 @@ export function ViewportWindowsComponent() {
     const y = Math.round(details.centerY);
 
 
-    // setViewportPosition({
-    //   x,
-    //   y,
-    //   zoom: details.zoomFactor,
-    // })
+    setViewportPosition({
+      x,
+      y,
+      zoom: details.zoomFactor,
+    })
 
     // viewport.setBounds({ x: [details.zoomFactor, x || 0], y: [details.zoomFactor, y || 0] });
   }
@@ -122,37 +136,64 @@ export function ViewportWindowsComponent() {
     }
   }, [viewport]);
 
+  const [ s, setS ] = useState({
+    w: size.w + 80,
+    h: 40,
+    x: 0,
+    y: 0,
+  });
+
+  // @ts-ignore
+  function onResize(a, b, ref, d, position) {
+    const width = parseFloat(ref.style.width.replace('px', ''));
+    const height = parseFloat(ref.style.height.replace('px', ''));
+    setS({
+      w: width,
+      h: height,
+      ...position,
+    });
+
+    setSize(i => ({
+      ...i,
+      w: width - 80,
+    }))
+  }
 
   return (
     <main ref={parentRef} className="flex-1 relative " style={{ background: 'url("/grid.webp")', backgroundSize: '8%' }}>
-      <ViewportMenu />
+      {/* <ViewportMenu /> */}
       <div className="absolute left-0 top-0 w-screen h-screen opacity-80 bg-gray-950 backdrop-blur" ></div>
+      <Resolution size={size} />
+
       <Space 
         onCreate={setViewport}
         onUpdated={updateViewportPosition}
         onDecideHowToHandlePress={(e) => {
         return {
-          ignorePressEntirely: context?.settings?.lock,
+          // ignorePressEntirely: context?.settings?.lock,
+          ignorePressEntirely: lock,
         }
       }}>
         <NoPanArea style={{ width: '100vW', height: '100vH' }}>
           <div ref={ref} className="relative">
             { config?.globals?.css && <style>{config.globals.css}</style> }
 
-            <div className="absolute -top-16 text-4xl right-0 p-2 text-white z-10">{config.resolution.w}x{config.resolution.h} | {config.resolution.w / r}/{config.resolution.h / r}</div>
-            <div className={backgroundClass + " flex flex-col h-screen relative items-center justify-center"}>
-              <div className="flex m-x-auto w-full" style={{ maxWidth: 1500 }}>
-                <div className="flex flex-col w-full group/item relative p-4">
-                  <div className="absolute left-0 top-0 w-full h-full group-hover/item:border-2 border-blue-300 z-20" />
-                  <h1 className="font-extralight text-6xl text-gray-400">Hello from Left</h1>
-                  <h1 className="font-extralight text-4xl text-gray-400">This is description</h1>
+
+            <div className={backgroundClass + " flex flex-col relative items-center min-h-screen"} style={{ width: size.w }}>
+              <div className="absolute left-0 top-2/4 -translate-y-2/4 h-32">
+                <Rnd onResizeStart={() => setLock(true) } onResize={onResize} onResizeStop={() => setLock(false)} style={{ cursor: 'initial' }} 
+                  position={{ x: s.x, y: s.y }} 
+                  size={{ width: s.w, height: '100%' }} dragAxis="none" enableResizing={{
+                  right: true,
+                  // left: true,
+                }}>
+                  <div className="absolute -right-1 pointer-events-none top-0 w-2 h-full bg-white/40 rounded-full z-10" />
+                  {/* <div className="absolute -left-1 pointer-events-none top-0 w-2 h-full bg-white/60 rounded-full z-10" /> */}
+
+                </Rnd>
                 </div>
-                <div className="flex flex-col w-full items-end group/item relative p-4">
-                <div className="absolute left-0 top-0 w-full h-full group-hover/item:border-2 border-blue-300 z-20" />
-                  <h1 className="font-extralight text-6xl text-gray-400">Hello from Right</h1>
-                  <h1 className="font-extralight text-4xl text-gray-400">This is description</h1>
-                </div>
-              </div>
+
+              <ViewportRender />
             </div>
           </div>
         </NoPanArea>

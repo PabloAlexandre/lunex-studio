@@ -1,5 +1,5 @@
 import { useEditor } from "@lunex/state";
-import { Icon } from "@lunex/icons";
+import { Icon } from "@lunex/icons/src";
 
 export const CustomNode = ({ setId, active, testIdPrefix = "", ...props }: any) => {
   const { id } = props.node;

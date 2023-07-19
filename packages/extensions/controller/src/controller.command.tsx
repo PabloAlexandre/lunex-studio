@@ -1,5 +1,5 @@
-import { Icon } from "@lunex/icons"
-import { createBasicCommand, createBasicItem } from "@lunex/commands"
+import { Icon } from "@lunex/icons/src"
+// import { createBasicCommand, createBasicItem } from "@lunex/commands/src"
 import { EditorInfoContext } from "@lunex/state";
 
 function createNewController({ window }: EditorInfoContext) {

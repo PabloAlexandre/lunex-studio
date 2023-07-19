@@ -1,7 +1,7 @@
 import { ElementType, ReactNode } from "react";
 import { PLUGIN_PANEL_ID } from "../plugins.constants";
 import { v4 as uuid } from 'uuid';
-import { IconName } from "@lunex/icons";
+import { IconName } from "@lunex/icons/src";
 
 export interface BasePanelProps {
   title?: string;

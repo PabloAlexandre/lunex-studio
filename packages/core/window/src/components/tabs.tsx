@@ -4,7 +4,6 @@ import { Tab } from './tab';
 
 export function Tabs() {
   const { tabs, activeTab, closeTab, sortTabs, editTab, setActiveTabById } = useWindow();
-  console.log({ tabs });
   const moveCard = (dragIndex: number, hoverIndex: number) => {
     sortTabs(dragIndex, hoverIndex);
 

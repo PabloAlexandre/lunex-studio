@@ -1,13 +1,13 @@
 'use client';
 
 import { Command } from "cmdk";
-import { Icon } from "@lunex/icons";
-import { groupBy, useHotkeys } from "@lunex/utils";
-import { useEditor } from "@lunex/state";
+import { Icon } from "@lunex/icons/src";
+import { groupBy, useHotkeys } from "@lunex/utils/src";
+import { useEditor } from "@lunex/state/src";
 import { ListPanel } from "./panels/list.panel";
 import { PreviewPanel } from "./panels/preview.panel";
 import { useState } from "react";
-import { CommandPluginConfigProps, usePlugins } from "@lunex/plugins";
+import { CommandPluginConfigProps, usePlugins } from "@lunex/plugins/src";
 
 export function Finder() {
   const [ value, setValue ] = useState('');
@@ -15,7 +15,6 @@ export function Finder() {
   const { getConfigs } = usePlugins();
 
   const commands = getConfigs<CommandPluginConfigProps>('@lunex/commands');
-  console.log(commands);
   
   const {
     context,

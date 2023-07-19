@@ -7,7 +7,7 @@ import { useEditor } from "@lunex/state";
 import { CustomNode } from "./components/CustomNode";
 import { CustomDragPreview } from "./components/CustomDragPreview";
 import { Placeholder } from "./components/Placeholder";
-import { Icon, IconKeys } from "@lunex/icons";
+import { IconKeys } from "@lunex/icons/src";
 import { useState } from "react";
 
 

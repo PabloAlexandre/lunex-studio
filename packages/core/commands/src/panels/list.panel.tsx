@@ -2,7 +2,7 @@
 
 import { Command } from "cmdk";
 import { generateColorFromString } from "@lunex/utils";
-import { Icon } from "@lunex/icons";
+import { Icon } from "@lunex/icons/src";
 import { CommandPluginConfigProps } from "@lunex/plugins";
 
 interface ItemProps {

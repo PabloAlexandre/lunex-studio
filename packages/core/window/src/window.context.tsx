@@ -1,8 +1,8 @@
 import { createContext } from "react";
-import { useEditor } from '@lunex/state';
-import { IconName } from "@lunex/icons";
+import { useEditor } from '@lunex/state/src';
+import { IconName } from "@lunex/icons/src";
 import { v4 as uuid } from 'uuid';
-import { useHotkeys } from "@lunex/utils";
+import { useHotkeys } from "@lunex/utils/src";
 
 export interface Tab {
   isEditable: boolean;

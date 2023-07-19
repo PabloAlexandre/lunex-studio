@@ -95,7 +95,22 @@ export function useEditorInfo(serializer: EditorSerializer): any {
   }
 
   function addShared(name: string, value: any) {
-    setEditorField('shared', (oldIt) => [...oldIt.shared, { name, value }]);
+    setEditorField('shared', (oldIt) => {
+      if(oldIt.shared.find((it: any) => it.name === name)) {
+        return oldIt.shared.map((it: any) => {
+          if(it.name === name) {
+            return {
+              name,
+              value,
+            }
+          }
+
+          return it;
+        })
+      }
+
+      return [...oldIt.shared, { name, value }]
+    });
   }
 
   function getShared(name: string) {

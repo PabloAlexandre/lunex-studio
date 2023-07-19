@@ -1,7 +1,7 @@
 'use client';
 
 import { useEditor } from "@lunex/state"
-import { Icon } from "@lunex/icons"
+import { Icon } from "@lunex/icons/src"
 
 const iconSetMap = {
   horizontal: [

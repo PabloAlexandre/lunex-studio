@@ -1,4 +1,4 @@
-import { Icon } from "@lunex/icons";
+import { Icon } from "@lunex/icons/src";
 
 export type InlineStyles = 'BOLD' | 'ITALIC' | 'UNDERLINE' | 'STRIKETHROUGH' | 'UPPERCASE' | 'LOWERCASE' | 'LETTERCASE';
 

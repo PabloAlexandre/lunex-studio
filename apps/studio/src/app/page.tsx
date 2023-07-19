@@ -1,6 +1,6 @@
 'use client';
 
-import { Editor, useWindow } from "@lunex/editor";
+import { Editor, useWindow } from "@lunex/editor/src";
 
 
 function Page() {

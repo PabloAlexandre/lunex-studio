@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Icon } from "@lunex/icons";
-import { PanelPluginConfigProps, usePlugins } from "@lunex/plugins";
+import { Icon } from "@lunex/icons/src";
+import { PanelPluginConfigProps, usePlugins } from "@lunex/plugins/src";
 
 
 function ItemPanel({
@@ -25,7 +25,7 @@ export function SidePanel({
   const panels = getConfigs<PanelPluginConfigProps>("@lunex/panel")
     .filter(it => it.panelSide === orientation && it.isVisible());
     
-  const className = active ? 'w-96' : '';
+  const className = (active ? 'w-96 ' : '')+orientation+'-0';
   const activePanel = active && panels.find(it => it.id === active);
 
   const menus = (
@@ -34,8 +34,8 @@ export function SidePanel({
     {
       panels.length ? (
         panels.map((panel, index) => (
-          <div className="flex flex-col p-2 pb-0 mb-1">
-            <ItemPanel key={index}  onClick={() => setActive(panel.id === active ? '' : panel.id)} icon={panel.icon} active={active === panel.id} />
+          <div  key={index} className="flex flex-col p-2 pb-0 mb-1">
+            <ItemPanel onClick={() => setActive(panel.id === active ? '' : panel.id)} icon={panel.icon} active={active === panel.id} />
           </div>
         ))
       ) : null
@@ -54,10 +54,12 @@ export function SidePanel({
 
 
   return (
-    <div className={className + "  select-none flex h-full justify-center bg-gray-200 dark:bg-gray-800 z-10"} style={{ boxShadow: '0 3px 24px 0 rgba(0,0,0, 0.5)' }}>
-      {
-        components
-      }
+    <div className="relative">
+      <div className={className + " absolute select-none flex h-full justify-center bg-gray-200 dark:bg-gray-800 z-10"} style={{ boxShadow: '0 3px 24px 0 rgba(0,0,0, 0.5)' }}>
+        {
+          components
+        }
+      </div>
     </div>
   )
 }

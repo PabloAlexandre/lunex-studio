@@ -1,4 +1,4 @@
-import { IconName } from "@lunex/icons";
+import { IconName } from "@lunex/icons/src";
 import { ElementType, ReactNode } from "react";
 import { v4 as uuid } from 'uuid';
 import { PLUGIN_WINDOW_ID } from "../plugins.constants";

@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 
 import { useEditor } from "@lunex/state";
-import { Icon } from "@lunex/icons";
+import { Icon } from "@lunex/icons/src";
 
 interface AccordionProps {
   title: string;

@@ -1,5 +1,5 @@
 import slugify from "slugify";
-import { IconName } from "@lunex/icons";
+import { IconName } from "@lunex/icons/src";
 import { PLUGIN_COMMANDS_ID } from "../plugins.constants";
 import { EditorInfoContext } from "../plugins.type";
 import { v4 as uuid } from 'uuid';

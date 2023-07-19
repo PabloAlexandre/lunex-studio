@@ -1,5 +1,5 @@
-import { Commands } from "@lunex/plugins"
-import { EditorInfoContext } from "@lunex/state";
+import { Commands } from "@lunex/plugins/src"
+import { EditorInfoContext } from "@lunex/state/src";
 
 const isViewportLocked = ({ settings, window }: EditorInfoContext) => settings.lock === true && window.opened === 'viewport';
 const isViewportUnlocked = ({ settings, window }: EditorInfoContext) => settings.lock === false && window.opened === 'viewport';

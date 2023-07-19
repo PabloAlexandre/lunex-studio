@@ -1,7 +1,7 @@
 import { Drag, Presets } from "rete-react-render-plugin";
 import { Schemes } from "./types";
 import { css } from "styled-components";
-import { useRegister } from "@lunex/plugins";
+import { useRegister } from "@lunex/plugins/src";
 
 export const nodeStyle = css<{ selected?: boolean }>`
   background-color: rgba(255, 255, 255, 0.8);

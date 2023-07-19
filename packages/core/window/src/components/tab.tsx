@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Tab } from "../window.context";
 import { useDrag, useDrop } from "react-dnd";
-import { Icon } from "@lunex/icons";
+import { Icon } from "@lunex/icons/src";
 
 interface TabProps {
   children?: string;
@@ -154,7 +154,6 @@ export function Tab({ index, onSort, onClick, onClose, onChange, active, tab, ch
 
   }, [ isDragging ]);
 
-  console.log({ tab: tab.icon });
   return (
     <div ref={ref} onClick={onClick} className={className + " relative h-full flex items-center text-left py-3 pl-4 pr-11 text-sm border-x border-x-gray-800 border-t-sky-300  dark:text-gray-300 group/tab"}  style={{ opacity, boxShadow: '0 3px 24px 0 rgba(0,0,0, 0.5)' }}>
       

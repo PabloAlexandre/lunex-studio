@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@minoru/react-dnd-treeview": "~3.4.4",
-    "react-zoomable-ui": "~0.11.0"
+    "react-zoomable-ui": "~0.11.0",
+    "react-rnd": "~10.4.1"
   }
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useRegister } from "@lunex/plugins";
+import { useRegister } from "@lunex/plugins/src";
 
 interface InspectorRenderProps {
   id: string;

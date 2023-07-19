@@ -1,4 +1,4 @@
-import { Panel } from "@lunex/plugins";
+import { Panel } from "@lunex/plugins/src";
 
 const PanelComponent = () => {
   return (

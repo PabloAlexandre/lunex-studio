@@ -17,7 +17,7 @@ import {
   ColorPickerSwatchGroup,
 } from '@ark-ui/react';
 
-import { Icon } from "@lunex/icons";
+import { Icon } from "@lunex/icons/src";
 import { useClickOutside } from "@lunex/utils";
 import { useEditor } from "@lunex/state"
 

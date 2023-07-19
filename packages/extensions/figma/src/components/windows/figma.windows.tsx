@@ -1,4 +1,4 @@
-import { Window } from "@lunex/plugins";
+import { Window } from "@lunex/plugins/src";
 
 export function FigmaWindowImpl() {
   return (

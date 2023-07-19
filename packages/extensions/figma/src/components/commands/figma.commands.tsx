@@ -1,4 +1,4 @@
-import { Commands } from "@lunex/plugins"
+import { Commands } from "@lunex/plugins/src"
 
 export const FigmaCommandsConfig = Commands.createBasicCommand('Figma', [
   Commands.createBasicItem("Open Figma", "This opens figma", () => {}, "FrameIcon", () => true, () => 1),

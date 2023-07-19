@@ -1,5 +1,5 @@
-import { Commands } from "@lunex/plugins"
-import { EditorInfoContext } from "@lunex/state";
+import { Commands } from "@lunex/plugins/src"
+import { EditorInfoContext } from "@lunex/state/src";
 
 const isInspectorVisible = ({ settings }: EditorInfoContext) => settings.inspector === true;
 const isInspectorHide = ({ settings }: EditorInfoContext) => settings.inspector === false;
@@ -13,6 +13,6 @@ function showInspector({ toggleSettings }: EditorInfoContext) {
 }
 
 export const LayoutCommands = Commands.createBasicCommand('Editor', [
-  Commands.createBasicItem('Hide sidebar', 'Hide inspector sidebar', hideInspector, "FullscreenIcon", isInspectorVisible, () => 23132131321313),
-  Commands.createBasicItem('Show sidebar', 'Show inspector sidebar', showInspector, "SidebarIcon", isInspectorHide, () => 23132131321313),
+  Commands.createBasicItem('Hide sidebar', 'Hide inspector sidebar', hideInspector, "FullscreenIcon", isInspectorVisible, () => 4),
+  Commands.createBasicItem('Show sidebar', 'Show inspector sidebar', showInspector, "SidebarIcon", isInspectorHide, () => 4),
 ])

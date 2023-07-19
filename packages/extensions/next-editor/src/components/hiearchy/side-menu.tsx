@@ -1,4 +1,4 @@
-import { Icon } from "@lunex/icons";
+import { Icon } from "@lunex/icons/src";
 import { useState } from "react";
 
 import { ComponentView, HierarchyView } from "./hierarchy";

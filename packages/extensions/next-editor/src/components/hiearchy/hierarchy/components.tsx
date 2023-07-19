@@ -1,5 +1,5 @@
 import { useClickOutside } from "@lunex/utils";
-import { Icon } from "@lunex/icons";
+import { Icon } from "@lunex/icons/src";
 import { createPortal } from "react-dom";
 
 const PRIMITIVES = [{
